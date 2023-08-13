@@ -51,11 +51,9 @@ window.onload = function () {
 };
 
 const startGame = (e) => {
-  if (e.which == 13 || e.which == 254) {
-    requestAnimationFrame(update);
-    setInterval(placePipes, 1750);
-    document.addEventListener("click", moveBird);
-  }
+  requestAnimationFrame(update);
+  setInterval(placePipes, 1750);
+  document.addEventListener("click", moveBird);
 };
 
 const update = () => {
