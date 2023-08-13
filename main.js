@@ -48,10 +48,11 @@ window.onload = function () {
   bottomPipeImg.src = "./hedi-duz.png";
 
   window.addEventListener("keypress", startGame);
+  window.addEventListener("click", startGame);
 };
 
 const startGame = (e) => {
-  if (e.which == 13) {
+  if (e.which == 13 || e.wh,ch == 254) {
     requestAnimationFrame(update);
     setInterval(placePipes, 1750);
     document.addEventListener("click", moveBird);
