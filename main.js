@@ -47,13 +47,15 @@ window.onload = function () {
   bottomPipeImg = new Image();
   bottomPipeImg.src = "./hedi-duz.png";
 
-  window.addEventListener("click", startGame);
+  window.addEventListener("keypress", startGame);
 };
 
 const startGame = (e) => {
-  requestAnimationFrame(update);
-  setInterval(placePipes, 1750);
-  document.addEventListener("click", moveBird);
+  if (e.which == 13) {
+    requestAnimationFrame(update);
+    setInterval(placePipes, 1750);
+    document.addEventListener("click", moveBird);
+  }
 };
 
 const update = () => {
